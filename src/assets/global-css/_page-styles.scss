@@ -1,0 +1,65 @@
+.page-container {
+	min-height: 100%;
+	min-width: 100%;
+	overflow-x: hidden;
+}
+
+.bg-black-overlay {
+  background-color: rgb(40, 40, 40);
+}
+
+.gray-text {
+  color: #8A8B8E;
+}
+
+.white-text {
+  color: #ffffff;
+}
+
+.white-background {
+  background-color: white;
+}
+
+mat-tooltip-component > div.mat-tooltip {
+  font-size: 14px;
+  padding: 8px;
+  text-align: center;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-magnifying-glass {
+  cursor: zoom-in;
+}
+
+.visibility-hidden {
+  visibility: hidden;
+}
+
+.display-none {
+  display: none;
+}
+
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+.overflow-y-scroll {
+  overflow-y: auto;
+}
+
+.round-img {
+  border-radius: 50%;
+}
+
+.ngx-mat-drp-date-input {
+  color: initial !important;
+}
+
+simple-snack-bar {
+  span {
+    width: 100%;
+  }
+}

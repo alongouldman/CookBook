@@ -1,0 +1,109 @@
+$i: 5;
+@while $i <= 100 {
+
+	.w-#{$i}-p {
+		width: $i + 0%;
+	}
+
+	.h-#{$i}-p {
+		height: $i + 0%;
+	}
+
+	$i: $i + 5;
+}
+
+$i: 4;
+
+@while $i <=600 {
+	.w-#{$i} {
+		width: $i + 0px;
+	}
+
+	.min-w-#{$i} {
+		min-width: $i + 0px;
+	}
+
+	.h-#{$i} {
+		height: $i + 0px;
+	}
+
+	.min-h-#{$i} {
+		min-height: $i + 0px;
+	}
+
+	$i: $i + 4;
+}
+
+$i: 0;
+@while $i <= 500 {
+
+	.m-#{$i} {
+		margin: $i + 0px !important;
+	}
+
+	.mt-#{$i} {
+		margin-top: $i + 0px !important;
+	}
+
+	.mb-#{$i} {
+		margin-bottom: $i + 0px !important;
+	}
+
+	.ml-#{$i} {
+		margin-left: $i + 0px !important;
+	}
+
+	.mr-#{$i} {
+		margin-right: $i + 0px !important;
+	}
+
+	.mx-#{$i} {
+		margin: {
+			left: ($i + 0px) !important;
+			right: ($i + 0px) !important;
+		};
+	}
+
+	.my-#{$i} {
+		margin: {
+			top: ($i + 0px) !important;
+			bottom: ($i + 0px) !important;
+		}
+	}
+
+	.p-#{$i} {
+		padding: $i + 0px !important;
+	}
+
+	.pt-#{$i} {
+		padding-top: $i + 0px !important;
+	}
+
+	.pb-#{$i} {
+		padding-bottom: $i + 0px !important;
+	}
+
+	.pl-#{$i} {
+		padding-left: $i + 0px !important;
+	}
+
+	.pr-#{$i} {
+		padding-right: $i + 0px !important;
+	}
+
+	.px-#{$i} {
+		padding: {
+			left: ($i + 0px) !important;
+			right: ($i + 0px) !important;
+		}
+	};
+
+	.py-#{$i} {
+		padding: {
+			top: ($i + 0px) !important;
+			bottom: ($i + 0px) !important;
+		}
+	};
+
+	$i: $i + 4;
+}
