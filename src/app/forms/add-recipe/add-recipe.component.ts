@@ -21,9 +21,10 @@ export class AddRecipeComponent {
 	};
 
 	constructor(private api: ApiService, private fb: FormBuilder) {
-		// this.api.getUsers();
+		this.api.getUsers();
 		this.recipeForm = this.fb.group({
-			instructions: [null, Validators.required]
+			instructions: [null, Validators.required],
+			overall_time: [0, Validators.required]
 		});
 		this.recipeForm.addControl('ingredients', this.fb.array([]));
 		this.addIngredientRow();
@@ -46,6 +47,7 @@ export class AddRecipeComponent {
 		let reader = new FileReader();
 
 		reader.onload = (e) => {
+			this.uploadedImage = e.target['result'];
 			document.getElementById('add-image').setAttribute('src', e.target['result']);
 		};
 

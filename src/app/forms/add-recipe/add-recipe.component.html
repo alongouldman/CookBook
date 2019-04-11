@@ -1,5 +1,5 @@
-<div class="page-container p-8 bg-overlay">
-	<mat-card>
+<div class="page-container bg-overlay">
+	<mat-card class="p-40">
 		<div fxLayout="row">
 			<div fxFlex="1 1 auto">
 				<section class="mat-typography">
@@ -10,19 +10,19 @@
 						<div *ngFor="let ing of FormToArray(); let i = index" fxLayout="row"
 							 fxLayoutAlign="start center"
 							 [formGroupName]="i">
-							<mat-form-field appearance="outline">
+							<mat-form-field appearance="outline" class="mr-8">
 								<mat-label>Ingredient</mat-label>
 								<input matInput type="text" formControlName="name">
 								<mat-error class="text-bold">*Required</mat-error>
 							</mat-form-field>
 
-							<mat-form-field appearance="outline">
+							<mat-form-field appearance="outline" class="w-100 mr-8">
 								<mat-label>Amount</mat-label>
 								<input matInput type="number" step="1" formControlName="amount">
 								<mat-error class="text-bold">*Required</mat-error>
 							</mat-form-field>
 
-							<mat-form-field appearance="outline">
+							<mat-form-field appearance="outline" class="w-100">
 								<mat-label>Type</mat-label>
 								<mat-select formControlName="type">
 									<mat-option *ngFor="let type of types" [value]="type">
@@ -62,11 +62,22 @@
 							<mat-error class="text-bold">*Required</mat-error>
 						</mat-form-field>
 					</div>
+
+					<div fxLayout="row" fxLayoutAlign="start center">
+						<mat-form-field appearance="outline" class="w-100">
+							<mat-label>Overall-Time</mat-label>
+							<input matInput type="number" formControlName="overall_time">
+						</mat-form-field>
+
+						<div class="form-field-bottom-padding ml-8">
+							Minutes
+						</div>
+					</div>
 				</form>
 			</div>
 
-			<div class="w-200">
-				<img width="200" height="200" id="add-image" class="add-image"
+			<div class="w-250">
+				<img width="200" height="200" id="add-image" class="add-image mr-48"
 					 src="../../../assets/images/forms/add-image.png" alt="add-image" (click)="onImageUpload()">
 				<input type="file" id="image-upload" class="display-none" (change)="onGotImage($event)">
 			</div>
