@@ -9,6 +9,7 @@ import { LoginModule } from './login/login.module';
 import { FormsModule } from './forms/forms.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ApiService } from './shared/services/api.service';
+import {AppContainerModule} from './app-container/app-container.module';
 
 @NgModule({
 	declarations: [
@@ -20,6 +21,7 @@ import { ApiService } from './shared/services/api.service';
 		NgReduxModule,
 		HttpClientModule,
 		LoginModule,
+		AppContainerModule,
 
 		FormsModule
 	],
