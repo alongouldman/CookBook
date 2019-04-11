@@ -33,33 +33,39 @@
 	.st27{fill:#FFCC66;}
 	.st28{fill:#F9ECD7;}
 	.st29{clip-path:url(#SVGID_2_);fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
-	.st30{fill:none;stroke:#000000;stroke-width:3.7143;stroke-miterlimit:10;}
-	.st31{fill:none;stroke:#000000;stroke-width:2.3583;stroke-miterlimit:10;}
-	.st32{fill:none;stroke:#000000;stroke-width:3.6766;stroke-miterlimit:10;}
-	.st33{clip-path:url(#SVGID_4_);fill:none;stroke:#000000;stroke-width:2.3343;stroke-miterlimit:10;}
-	.st34{fill:none;stroke:#000000;stroke-width:2.3343;stroke-miterlimit:10;}
-	.st35{fill:none;stroke:#000000;stroke-width:3.5015;stroke-miterlimit:10;}
-	.st36{fill:none;stroke:#000000;stroke-miterlimit:10;}
-	.st37{clip-path:url(#SVGID_6_);fill:none;stroke:#000000;stroke-miterlimit:10;}
-	.st38{fill:none;stroke:#F9ECD7;stroke-width:3;stroke-miterlimit:10;}
-	.st39{fill:none;stroke:#F9ECD7;stroke-width:3.15;stroke-miterlimit:10;}
-	.st40{fill:none;stroke:#F9ECD7;stroke-width:2;stroke-miterlimit:10;}
-	.st41{fill:none;stroke:#F9ECD7;stroke-width:1.5111;stroke-miterlimit:10;}
-	.st42{fill:none;stroke:#F9ECD7;stroke-width:1.9308;stroke-miterlimit:10;}
-	.st43{fill:#FCF2DE;}
-	.st44{fill:none;stroke:#F9ECD7;stroke-width:3.7143;stroke-miterlimit:10;}
-	.st45{fill:none;stroke:#F9ECD7;stroke-width:2.3583;stroke-miterlimit:10;}
-	.st46{clip-path:url(#SVGID_8_);fill:none;stroke:#000000;stroke-width:2.3343;stroke-miterlimit:10;}
-	.st47{fill:#FFFFFF;}
-	.st48{clip-path:url(#SVGID_10_);fill:none;stroke:#000000;stroke-width:2.3343;stroke-miterlimit:10;}
-	.st49{fill:none;stroke:#F9ECD7;stroke-width:3.6766;stroke-miterlimit:10;}
-	.st50{clip-path:url(#SVGID_12_);fill:none;stroke:#F9ECD7;stroke-width:2.3343;stroke-miterlimit:10;}
-	.st51{fill:none;stroke:#F9ECD7;stroke-width:2.3343;stroke-miterlimit:10;}
-	.st52{fill:none;stroke:#F9ECD7;stroke-width:3.5015;stroke-miterlimit:10;}
+	.st30{fill:none;stroke:#000000;stroke-miterlimit:10;}
+	.st31{clip-path:url(#SVGID_4_);fill:none;stroke:#000000;stroke-miterlimit:10;}
+	.st32{fill:none;stroke:#F9ECD7;stroke-width:3;stroke-miterlimit:10;}
+	.st33{fill:none;stroke:#F9ECD7;stroke-width:3.15;stroke-miterlimit:10;}
+	.st34{fill:none;stroke:#F9ECD7;stroke-width:2;stroke-miterlimit:10;}
+	.st35{fill:none;stroke:#F9ECD7;stroke-width:1.5111;stroke-miterlimit:10;}
+	.st36{fill:none;stroke:#F9ECD7;stroke-width:1.9308;stroke-miterlimit:10;}
+	.st37{fill:#FCF2DE;}
+	.st38{fill:none;stroke:#000000;stroke-width:3.7143;stroke-miterlimit:10;}
+	.st39{fill:none;stroke:#000000;stroke-width:2.3583;stroke-miterlimit:10;}
+	.st40{fill:none;stroke:#F9ECD7;stroke-width:3.7143;stroke-miterlimit:10;}
+	.st41{fill:none;stroke:#F9ECD7;stroke-width:2.3583;stroke-miterlimit:10;}
+	.st42{fill:none;stroke:#000000;stroke-width:3.6766;stroke-miterlimit:10;}
+	.st43{clip-path:url(#SVGID_6_);fill:none;stroke:#000000;stroke-width:2.3343;stroke-miterlimit:10;}
+	.st44{fill:none;stroke:#000000;stroke-width:2.3343;stroke-miterlimit:10;}
+	.st45{fill:none;stroke:#000000;stroke-width:3.5015;stroke-miterlimit:10;}
+	.st46{fill:#FFFFFF;}
+	.st47{clip-path:url(#SVGID_8_);fill:none;stroke:#000000;stroke-width:2.3343;stroke-miterlimit:10;}
+	.st48{fill:none;stroke:#F9ECD7;stroke-width:3.6766;stroke-miterlimit:10;}
+	.st49{clip-path:url(#SVGID_10_);fill:none;stroke:#F9ECD7;stroke-width:2.3343;stroke-miterlimit:10;}
+	.st50{fill:none;stroke:#F9ECD7;stroke-width:2.3343;stroke-miterlimit:10;}
+	.st51{fill:none;stroke:#F9ECD7;stroke-width:3.5015;stroke-miterlimit:10;}
+	.st52{fill:none;stroke:#000000;stroke-width:1.0665;stroke-miterlimit:10;}
+	.st53{fill:none;stroke:#000000;stroke-width:0.6771;stroke-miterlimit:10;}
+	.st54{fill:none;stroke:#000000;stroke-width:0.5116;stroke-miterlimit:10;}
+	.st55{fill:none;stroke:#000000;stroke-width:0.6537;stroke-miterlimit:10;}
+	.st56{clip-path:url(#SVGID_12_);fill:none;stroke:#F9ECD7;stroke-width:2.3343;stroke-miterlimit:10;}
+	.st57{stroke:#000000;stroke-width:2.7573;stroke-miterlimit:10;}
+	.st58{fill:none;stroke:#000000;stroke-width:2.7573;stroke-miterlimit:10;}
 </style>
 <g>
-	<circle class="st49" cx="40" cy="40" r="36.8"/>
-	<circle class="st51" cx="45.8" cy="34.2" r="15.2"/>
-	<line class="st52" x1="35.3" y1="44.7" x2="21.3" y2="61"/>
+	<circle class="st48" cx="40" cy="40" r="36.8"/>
+	<circle class="st50" cx="34.2" cy="34.2" r="15.2"/>
+	<line class="st51" x1="44.7" y1="44.7" x2="61" y2="58.7"/>
 </g>
 </svg>
