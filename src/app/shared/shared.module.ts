@@ -3,9 +3,12 @@ import { CommonModule } from '@angular/common';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialModule } from './material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 
 @NgModule({
-	declarations: [],
+	declarations: [
+		LoadingSpinnerComponent
+	],
 	imports: [
 		CommonModule,
 		FlexLayoutModule,
@@ -18,7 +21,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 		FlexLayoutModule,
 		MaterialModule,
 		FormsModule,
-		ReactiveFormsModule
+		ReactiveFormsModule,
+		LoadingSpinnerComponent
 	]
 })
 export class SharedModule {
