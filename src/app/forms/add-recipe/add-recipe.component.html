@@ -1,29 +1,75 @@
-<div class="page-container text-center">
+<div class="page-container p-8 bg-overlay">
 	<mat-card>
-		<form [formGroup]="recipeForm">
-			<div formArrayName="ingredients">
-				<div *ngFor="let ing of FormToArray(); let i = index" fxLayout="row" fxLayoutAlign="center"
-					 [formGroupName]="i">
-					<mat-form-field appearance="outline">
-						<mat-label>Ingredient</mat-label>
-						<input matInput type="text" formControlName="name">
-					</mat-form-field>
+		<div fxLayout="row">
+			<div fxFlex="1 1 auto">
+				<section class="mat-typography">
+					<h1>Ingredients</h1>
+				</section>
+				<form [formGroup]="recipeForm">
+					<div formArrayName="ingredients" fxLayout="column">
+						<div *ngFor="let ing of FormToArray(); let i = index" fxLayout="row"
+							 fxLayoutAlign="start center"
+							 [formGroupName]="i">
+							<mat-form-field appearance="outline">
+								<mat-label>Ingredient</mat-label>
+								<input matInput type="text" formControlName="name">
+								<mat-error class="text-bold">*Required</mat-error>
+							</mat-form-field>
 
-					<mat-form-field appearance="outline">
-						<mat-label>Amount</mat-label>
-						<input matInput type="number" step="1" formControlName="amount">
-					</mat-form-field>
+							<mat-form-field appearance="outline">
+								<mat-label>Amount</mat-label>
+								<input matInput type="number" step="1" formControlName="amount">
+								<mat-error class="text-bold">*Required</mat-error>
+							</mat-form-field>
 
-					<mat-form-field appearance="outline">
-						<mat-label>Type</mat-label>
-						<mat-select formControlName="type">
-							<mat-option *ngFor="let type of types" [value]="type">
-								{{type}}
-							</mat-option>
-						</mat-select>
-					</mat-form-field>
-				</div>
+							<mat-form-field appearance="outline">
+								<mat-label>Type</mat-label>
+								<mat-select formControlName="type">
+									<mat-option *ngFor="let type of types" [value]="type">
+										{{type}}
+									</mat-option>
+								</mat-select>
+								<mat-error class="text-bold">*Required</mat-error>
+							</mat-form-field>
+
+							<div class="form-field-bottom-padding px-8">
+								<button mat-raised-button mat-icon-button (click)="removeIngredientRow($event, i)">
+									<mat-icon>remove</mat-icon>
+								</button>
+							</div>
+
+							<div class="form-field-bottom-padding"
+								 *ngIf="i === recipeForm.get('ingredients')['length'] - 1">
+								<button mat-raised-button mat-icon-button (click)="addIngredientRow()">
+									<mat-icon>add</mat-icon>
+								</button>
+
+							</div>
+						</div>
+					</div>
+
+					<section class="mat-typography">
+						<h1>Instructions</h1>
+					</section>
+
+					<div>
+						<mat-form-field appearance="outline" class="w-80-p">
+							<mat-label>Instructions</mat-label>
+							<textarea matInput formControlName="instructions" class="overflow-hidden"
+									  cdkTextareaAutosize
+									  #autosize="cdkTextareaAutosize"
+									  cdkAutosizeMinRows="5"></textarea>
+							<mat-error class="text-bold">*Required</mat-error>
+						</mat-form-field>
+					</div>
+				</form>
 			</div>
-		</form>
+
+			<div class="w-200">
+				<img width="200" height="200" id="add-image" class="add-image"
+					 src="../../../assets/images/forms/add-image.png" alt="add-image" (click)="onImageUpload()">
+				<input type="file" id="image-upload" class="display-none" (change)="onGotImage($event)">
+			</div>
+		</div>
 	</mat-card>
 </div>

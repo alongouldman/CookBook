@@ -14,7 +14,7 @@ $i: 5;
 
 $i: 4;
 
-@while $i <=600 {
+@while $i <= 600 {
 	.w-#{$i} {
 		width: $i + 0px;
 	}
@@ -96,14 +96,16 @@ $i: 0;
 			left: ($i + 0px) !important;
 			right: ($i + 0px) !important;
 		}
-	};
+	}
+;
 
 	.py-#{$i} {
 		padding: {
 			top: ($i + 0px) !important;
 			bottom: ($i + 0px) !important;
 		}
-	};
+	}
+;
 
 	$i: $i + 4;
 }

@@ -7,6 +7,8 @@ import { NgRedux, NgReduxModule } from '@angular-redux/store';
 import { INITIAL_STATE, rootReducer } from './store';
 import { LoginModule } from './login/login.module';
 import { FormsModule } from './forms/forms.module';
+import { HttpClientModule } from '@angular/common/http';
+import { ApiService } from './shared/services/api.service';
 
 @NgModule({
 	declarations: [
@@ -16,12 +18,12 @@ import { FormsModule } from './forms/forms.module';
 		BrowserModule,
 		AppRoutingModule,
 		NgReduxModule,
-
+		HttpClientModule,
 		LoginModule,
 
 		FormsModule
 	],
-	providers: [],
+	providers: [ApiService],
 	bootstrap: [AppComponent]
 })
 export class AppModule {
