@@ -10,6 +10,7 @@ import { FormsModule } from './forms/forms.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ApiService } from './shared/services/api.service';
 import {AppContainerModule} from './app-container/app-container.module';
+import { FeedModule } from './feed/feed.module';
 
 @NgModule({
 	declarations: [
@@ -22,7 +23,7 @@ import {AppContainerModule} from './app-container/app-container.module';
 		HttpClientModule,
 		LoginModule,
 		AppContainerModule,
-
+		FeedModule,
 		FormsModule
 	],
 	providers: [ApiService],
