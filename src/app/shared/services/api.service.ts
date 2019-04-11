@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 @Injectable()
 export class ApiService {
 
-	private readonly baseUrl = ' http://localhost:8000';
+	private readonly baseUrl = 'http://localhost:8000';
 
 	constructor(private http: HttpClient) {
 	}
@@ -14,6 +14,12 @@ export class ApiService {
 		this.get('/users').subscribe(response => {
 			console.log(response);
 		})
+	}
+
+	addRecipe(recipe) {
+		this.post('/add-recipe', recipe).subscribe(response => {
+			console.log(response);
+		});
 	}
 
 	private post(url: string, body: any): Observable<any> {

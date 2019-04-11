@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
+	MatAutocompleteModule,
 	MatButtonModule,
 	MatCardModule,
-	MatCheckboxModule, MatDialogModule,
+	MatCheckboxModule, MatChipsModule, MatDialogModule,
 	MatFormFieldModule, MatIconModule,
 	MatInputModule, MatMenuModule, MatPaginatorModule, MatRadioModule,
 	MatSelectModule, MatSidenavModule, MatSlideToggleModule, MatSnackBarModule,
@@ -34,7 +35,9 @@ import { MatSortModule } from '@angular/material/typings/sort';
 		MatTableModule,
 		MatSortModule,
 		MatPaginatorModule,
-		MatDialogModule
+		MatDialogModule,
+		MatAutocompleteModule,
+		MatChipsModule
 	],
 	exports: [
 		BrowserAnimationsModule,
@@ -57,7 +60,9 @@ import { MatSortModule } from '@angular/material/typings/sort';
 		MatTableModule,
 		MatSortModule,
 		MatPaginatorModule,
-		MatDialogModule
+		MatDialogModule,
+		MatAutocompleteModule,
+		MatChipsModule
 	]
 })
 export class MaterialModule {

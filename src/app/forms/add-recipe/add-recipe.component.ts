@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ApiService } from '../../shared/services/api.service';
+import { MatAutocomplete, MatAutocompleteSelectedEvent, MatChipInputEvent } from '@angular/material';
+import { COMMA, ENTER } from '@angular/cdk/keycodes';
 
 @Component({
 	selector: 'add-recipe',
@@ -9,7 +11,14 @@ import { ApiService } from '../../shared/services/api.service';
 })
 export class AddRecipeComponent {
 
-	types = ['g', 'ml'];
+	@ViewChild('chipInput') chipInput: ElementRef<HTMLInputElement>;
+	@ViewChild('auto') matAutocomplete: MatAutocomplete
+
+	separatorKeysCodes: number[] = [ENTER, COMMA];
+	units = ['g', 'ml'];
+	allTags: string[] = ['Vegan', 'Non Gluten', 'Non Dairy'];
+	filteredTags: string[] = [...this.allTags];
+	tags: string[] = [];
 	ingredients: string[] = [];
 	recipeForm: FormGroup;
 	uploadedImage;
@@ -17,14 +26,15 @@ export class AddRecipeComponent {
 	private readonly ingredientGroup = {
 		name: [null, Validators.required],
 		amount: [0, Validators.required],
-		type: [this.types[0], Validators.required]
+		unit: [this.units[0], Validators.required]
 	};
 
 	constructor(private api: ApiService, private fb: FormBuilder) {
 		this.api.getUsers();
 		this.recipeForm = this.fb.group({
 			instructions: [null, Validators.required],
-			overall_time: [0, Validators.required]
+			overall_time: [0, Validators.required],
+			tags: [null]
 		});
 		this.recipeForm.addControl('ingredients', this.fb.array([]));
 		this.addIngredientRow();
@@ -58,4 +68,49 @@ export class AddRecipeComponent {
 		return Array(this.recipeForm.get('ingredients')['length']);
 	}
 
+	add(event: MatChipInputEvent): void {
+
+		if(!this.matAutocomplete.isOpen) {
+			const input = event.input;
+			const value = event.value;
+
+			if((value || '').trim()) {
+				this.tags.push(value.trim());
+			}
+
+			// Reset the input value
+			if(input) {
+				input.value = '';
+			}
+
+			this.filteredTags = this._filter();
+			this.recipeForm.get('chips').setValue(null);
+		}
+	}
+
+	remove(chip: string): void {
+		const index = this.tags.indexOf(chip);
+
+		if(index >= 0) {
+			this.tags.splice(index, 1);
+		}
+	}
+
+	selected(event: MatAutocompleteSelectedEvent): void {
+		this.tags.push(event.option.viewValue);
+		this.chipInput.nativeElement.value = '';
+		this.filteredTags = this._filter();
+		this.recipeForm.get('chips').setValue(null);
+	}
+
+	onSave() {
+		const value = this.recipeForm.value;
+		value.tags = this.tags;
+		value.image = this.uploadedImage;
+		this.api.addRecipe(this.recipeForm.value);
+	}
+
+	private _filter(): string[] {
+		return this.allTags.filter(chip => !this.tags.includes(chip));
+	}
 }
