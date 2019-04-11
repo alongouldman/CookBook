@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FeedComponent } from './feed.component';
 import { SharedModule } from '../shared/shared.module';
 import { RouterModule, Routes } from '@angular/router';
+import { PostCardComponent } from './post-card/post-card.component';
 
 const routes: Routes = [
 	{
@@ -13,7 +14,8 @@ const routes: Routes = [
 
 @NgModule({
 	declarations: [
-		FeedComponent
+		FeedComponent,
+		PostCardComponent
 	],
 	imports: [
 		CommonModule,
