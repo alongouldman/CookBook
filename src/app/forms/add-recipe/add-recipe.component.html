@@ -2,10 +2,18 @@
 	<mat-card>
 		<div fxLayout="row">
 			<div fxFlex="1 1 auto">
-				<section class="mat-typography">
-					<h1>Ingredients</h1>
-				</section>
 				<form [formGroup]="recipeForm">
+					<section class="mat-typography">
+						<h1>Recipe Title</h1>
+					</section>
+					<mat-form-field appearance="outline">
+						<mat-label>Title</mat-label>
+						<input matInput type="text" formControlName="title">
+						<mat-error class="text-bold">*Required</mat-error>
+					</mat-form-field>
+					<section class="mat-typography">
+						<h1>Ingredients</h1>
+					</section>
 					<div formArrayName="ingredients" fxLayout="column">
 						<div *ngFor="let ing of FormToArray(); let i = index" fxLayout="row"
 							 fxLayoutAlign="start center"

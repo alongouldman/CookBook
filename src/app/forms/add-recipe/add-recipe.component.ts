@@ -12,10 +12,10 @@ import { COMMA, ENTER } from '@angular/cdk/keycodes';
 export class AddRecipeComponent {
 
 	@ViewChild('chipInput') chipInput: ElementRef<HTMLInputElement>;
-	@ViewChild('auto') matAutocomplete: MatAutocomplete
+	@ViewChild('auto') matAutocomplete: MatAutocomplete;
 
 	separatorKeysCodes: number[] = [ENTER, COMMA];
-	units = ['g', 'ml'];
+	units = ['g', 'ml', 'unit'];
 	allTags: string[] = ['Vegan', 'Non Gluten', 'Non Dairy'];
 	filteredTags: string[] = [...this.allTags];
 	tags: string[] = [];
@@ -32,6 +32,7 @@ export class AddRecipeComponent {
 	constructor(private api: ApiService, private fb: FormBuilder) {
 		this.api.getUsers();
 		this.recipeForm = this.fb.group({
+			title: [null, Validators.required],
 			instructions: [null, Validators.required],
 			overall_time: [0, Validators.required],
 			tags: [null]
@@ -104,6 +105,9 @@ export class AddRecipeComponent {
 	}
 
 	onSave() {
+		if(this.recipeForm.invalid) {
+			return;
+		}
 		const value = this.recipeForm.value;
 		value.tags = this.tags;
 		value.image = this.uploadedImage;
