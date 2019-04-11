@@ -1,26 +1,35 @@
-  <header xmlns="http://www.w3.org/1999/html">
-  <nav class="navbar h-76 navbar-expand-md navbar-dark fixed-top bg-dark">
-	  <a class="navbar-brand" [routerLink]="['/add-recipe']"><img src="../../../assets/images/brightAdd.svg" alt="logo" width="40" height="40"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse text-center" id="navbarCollapse">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#"><span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"><img src="../../../assets/images/brightUser.svg" alt="logo" width="40" height="40"></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
-        </li>
-      </ul>
-      <img src="../../../assets/images/bright logo.svg" alt="logo" align="" width="150" height="150">
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="search">
-        <button class="btn my-2 my-sm-0" type="submit"><img src="../../../assets/images/brightSearch.svg" alt="logo" width="40" height="40"></button>
-      </form>
-    </div>
-  </nav>
+<header xmlns="http://www.w3.org/1999/html">
+	<nav class="navbar h-76 navbar-expand-md navbar-dark fixed-top bg-dark" fxLayout="row"
+		 fxLayoutAlign="space-between center">
+		<div fxLayout="row">
+			<a class="navbar-brand" [routerLink]="['/add-recipe']"><img src="../../../assets/images/brightAdd.svg"
+																		alt="logo" width="40" height="40"></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+					aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarCollapse">
+				<ul class="navbar-nav">
+					<li class="nav-item active">
+						<a class="nav-link" href="#"><span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#"><img src="../../../assets/images/brightUser.svg" alt="logo"
+														  width="40"
+														  height="40"></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<img src="../../../assets/images/bright logo.svg" alt="logo" align="" width="150" height="150">
+		<form class="form-inline mt-2 mt-md-0">
+			<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="search">
+			<button class="btn my-2 my-sm-0" type="submit"><img src="../../../assets/images/brightSearch.svg"
+																alt="logo" width="40" height="40"></button>
+		</form>
+	</nav>
 </header>
