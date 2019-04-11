@@ -16,19 +16,19 @@ $i: 4;
 
 @while $i <= 600 {
 	.w-#{$i} {
-		width: $i + 0px;
+		width: $i + 0px !important;
 	}
 
 	.min-w-#{$i} {
-		min-width: $i + 0px;
+		min-width: $i + 0px !important;
 	}
 
 	.h-#{$i} {
-		height: $i + 0px;
+		height: $i + 0px !important;
 	}
 
 	.min-h-#{$i} {
-		min-height: $i + 0px;
+		min-height: $i + 0px !important;
 	}
 
 	$i: $i + 4;
