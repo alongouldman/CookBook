@@ -1,0 +1,19 @@
+<div class="page-container text-center" fxLayout="column" fxLayoutAlign="center center">
+	<form class="form-signin" [formGroup]="loginForm">
+		<h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+		<mat-form-field>
+			<input matInput type="text" formControlName="username" placeholder="Username">
+		</mat-form-field>
+
+		<mat-form-field>
+			<input matInput type="password" formControlName="password" placeholder="Password">
+		</mat-form-field>
+
+		<div class="checkbox mb-3">
+			<mat-checkbox formControlName="remember">Remember Me</mat-checkbox>
+		</div>
+
+		<button class="btn btn-lg btn-primary btn-block" type="submit" (click)="onSubmit()">Sign in</button>
+		<p class="mt-5 mb-3 text-muted">&copy; 2019</p>
+	</form>
+</div>

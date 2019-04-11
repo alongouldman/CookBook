@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { NgRedux, NgReduxModule } from '@angular-redux/store';
 import { INITIAL_STATE, rootReducer } from './store';
+import { LoginModule } from './login/login.module';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,8 @@ import { INITIAL_STATE, rootReducer } from './store';
     BrowserModule,
     AppRoutingModule,
     NgReduxModule,
+
+    LoginModule
   ],
   providers: [{
     provide: LocationStrategy,
