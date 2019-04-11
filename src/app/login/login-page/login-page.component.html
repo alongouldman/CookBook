@@ -1,19 +1,25 @@
-<div class="page-container text-center" fxLayout="column" fxLayoutAlign="center center">
+<div class="page-container text-center bg-overlay" fxLayout="column" fxLayoutAlign="center center">
 	<form class="form-signin" [formGroup]="loginForm">
-		<h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-		<mat-form-field>
-			<input matInput type="text" formControlName="username" placeholder="Username">
-		</mat-form-field>
+		<mat-card>
+			<h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+			<mat-form-field appearance="outline" class="w-100-p">
+				<mat-label>Username</mat-label>
+				<input matInput type="text" formControlName="username">
+				<mat-error>*Required</mat-error>
+			</mat-form-field>
 
-		<mat-form-field>
-			<input matInput type="password" formControlName="password" placeholder="Password">
-		</mat-form-field>
+			<mat-form-field appearance="outline" class="w-100-p">
+				<mat-label>Password</mat-label>
+				<input matInput type="password" formControlName="password">
+				<mat-error>*Required</mat-error>
+			</mat-form-field>
 
-		<div class="checkbox mb-3">
-			<mat-checkbox formControlName="remember">Remember Me</mat-checkbox>
-		</div>
+			<div class="checkbox mb-3">
+				<mat-checkbox color="primary" formControlName="remember">Remember Me</mat-checkbox>
+			</div>
 
-		<button class="btn btn-lg btn-primary btn-block" type="submit" (click)="onSubmit()">Sign in</button>
-		<p class="mt-5 mb-3 text-muted">&copy; 2019</p>
+			<button class="btn btn-lg btn-primary btn-block" type="submit" (click)="onSubmit()">Sign in</button>
+			<p class="mt-5 mb-3 text-muted">&copy; 2019</p>
+		</mat-card>
 	</form>
 </div>
