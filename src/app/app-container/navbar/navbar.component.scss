@@ -7,8 +7,9 @@
   user-select: none;
 }
 
-.navbar {
-  padding: 0.5rem 2.5rem !important;
+.navbar {/*padding: 0.5rem 2.5rem;*/
+  padding-right:50px;padding-left:70px;padding-top:15px;/*!important;*/
+
 }
 
 @media (min-width: 768px) {
