@@ -12,6 +12,18 @@
 
 }
 
+/*<img src="../../../assets/images/brightAdd.svg"
+														  alt="logo" width="40" height="40">*/
+div.add-icon-img {
+  width: 40px;
+  height: 40px;
+  background-image: url("../../../assets/images/brightAdd.svg");
+
+  &:hover {
+    background-image: url("../../../assets/images/greenAdd.svg");
+  }
+}
+
 @media (min-width: 768px) {
   .bd-placeholder-img-lg {
     font-size: 3.5rem;
