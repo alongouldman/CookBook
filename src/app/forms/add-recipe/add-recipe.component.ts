@@ -15,8 +15,8 @@ export class AddRecipeComponent {
 	@ViewChild('auto') matAutocomplete: MatAutocomplete;
 
 	separatorKeysCodes: number[] = [ENTER, COMMA];
-	units = ['g', 'ml', 'unit'];
-	allTags: string[] = ['Vegan', 'Non Gluten', 'Non Dairy'];
+	units = ['g', 'ml', 'unit', 'spoon', 'cup','teaspoon'];
+	allTags: string[] = ['Vegan', 'Kosher', 'Non Dairy'];
 	filteredTags: string[] = [...this.allTags];
 	tags: string[] = [];
 	ingredients: string[] = [];
@@ -85,7 +85,7 @@ export class AddRecipeComponent {
 			}
 
 			this.filteredTags = this._filter();
-			this.recipeForm.get('chips').setValue(null);
+			this.recipeForm.get('tags').setValue(null);
 		}
 	}
 
@@ -101,7 +101,7 @@ export class AddRecipeComponent {
 		this.tags.push(event.option.viewValue);
 		this.chipInput.nativeElement.value = '';
 		this.filteredTags = this._filter();
-		this.recipeForm.get('chips').setValue(null);
+		this.recipeForm.get('tags').setValue(null);
 	}
 
 	onSave() {

@@ -23,7 +23,7 @@ export class ApiService {
 	}
 
 	addRecipe(recipe) {
-		this.post('/add-recipe', recipe).subscribe(response => {
+		this.post('/recipes', recipe).subscribe(response => {
 			console.log(response);
 		});
 	}
