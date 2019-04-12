@@ -15,15 +15,27 @@
 				{{recipe.instructions}}
 			</div>
 
-			<div fxLayout="row" fxLayoutAlign="end center" *ngIf="recipe.tags">
-				<div *ngFor="let tag of recipe.tags">
-					<ng-container [ngSwitch]="tag">
-						<img *ngSwitchCase="tags.VEGAN" width="40" height="40"
-							 src="../../../assets/images/feed/tags/vegan.svg" alt="vegan" matTooltip="Vegan">
-						<img *ngSwitchCase="tags.KOSHER" width="40" height="40"
-							 src="../../../assets/images/feed/tags/kosher.svg" alt="kosher" matTooltip="Kosher">
-						<img *ngSwitchCase="tags.NON_DAIRY" width="40" height="40"
-							 src="../../../assets/images/feed/tags/no-dairy.svg" alt="no-dairy" matTooltip="Non Dairy">
+			<div fxLayout="row" fxLayoutAlign="space-between center">
+				<div fxLayout="row" fxLayoutAlign="start center">
+					<img src="../../../assets/images/feed/clock.svg" width="32" height="32" alt="clock">
+					<div class="ml-8">
+						{{recipe.overall_time}}
+					</div>
+				</div>
+
+				<div fxLayout="row" fxLayoutAlign="end center">
+					<ng-container *ngIf="recipe.tags">
+						<div *ngFor="let tag of recipe.tags">
+							<ng-container [ngSwitch]="tag">
+								<img *ngSwitchCase="tags.VEGAN" width="40" height="40"
+									 src="../../../assets/images/feed/tags/vegan.svg" alt="vegan" matTooltip="Vegan">
+								<img *ngSwitchCase="tags.KOSHER" width="40" height="40"
+									 src="../../../assets/images/feed/tags/kosher.svg" alt="kosher" matTooltip="Kosher">
+								<img *ngSwitchCase="tags.NON_DAIRY" width="40" height="40"
+									 src="../../../assets/images/feed/tags/no-dairy.svg" alt="no-dairy"
+									 matTooltip="Non Dairy">
+							</ng-container>
+						</div>
 					</ng-container>
 				</div>
 			</div>
